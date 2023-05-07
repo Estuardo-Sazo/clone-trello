@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {OverlayModule} from '@angular/cdk/overlay';
-import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { BtnComponent } from './components/btn/btn.component';
 import { BoardsComponent } from './pages/boards/boards.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BoardComponent } from './pages/board/board.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +20,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     BtnComponent,
     BoardsComponent,
-    NavbarComponent
+    NavbarComponent,
+    BoardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     OverlayModule,
     CdkAccordionModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    DragDropModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
